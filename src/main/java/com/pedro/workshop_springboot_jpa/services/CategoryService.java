@@ -1,0 +1,27 @@
+package com.pedro.workshop_springboot_jpa.services;
+
+import com.pedro.workshop_springboot_jpa.entities.Category;
+import com.pedro.workshop_springboot_jpa.entities.User;
+import com.pedro.workshop_springboot_jpa.repositories.CategoryRepository;
+import com.pedro.workshop_springboot_jpa.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class CategoryService {
+
+    @Autowired
+    private CategoryRepository repository;
+
+    public List<Category> findAll() {
+        return repository.findAll();
+    }
+
+    public Category findById(Long id) {
+        Optional<Category> obj = repository.findById(id);
+        return obj.get();
+    }
+}
