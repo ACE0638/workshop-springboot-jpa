@@ -1,7 +1,7 @@
 package com.pedro.workshop_springboot_jpa.services;
 
-import com.pedro.workshop_springboot_jpa.entities.User;
-import com.pedro.workshop_springboot_jpa.repositories.UserRepository;
+import com.pedro.workshop_springboot_jpa.entities.Product;
+import com.pedro.workshop_springboot_jpa.repositories.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,17 +9,17 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class UserService {
+public class ProductService {
 
     @Autowired
-    private UserRepository repository;
+    private ProductRepository repository;
 
-    public List<User> findAll() {
+    public List<Product> findAll() {
         return repository.findAll();
     }
 
-    public User findById(Long id) {
-        Optional<User> obj = repository.findById(id);
+    public Product findById(Long id) {
+        Optional<Product> obj = repository.findById(id);
         return obj.get();
     }
 }
