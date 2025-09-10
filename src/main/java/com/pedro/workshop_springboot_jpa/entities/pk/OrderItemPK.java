@@ -10,7 +10,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-public class OrderitemPK  implements Serializable {
+public class OrderItemPK implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ManyToOne
@@ -40,7 +40,7 @@ public class OrderitemPK  implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        OrderitemPK that = (OrderitemPK) o;
+        OrderItemPK that = (OrderItemPK) o;
         return Objects.equals(order, that.order) && Objects.equals(product, that.product);
     }
 

@@ -29,5 +29,4 @@ public class ProductResources {
         Product obj = service.findById(id);
         return ResponseEntity.ok().body(obj);
     }
-
 }

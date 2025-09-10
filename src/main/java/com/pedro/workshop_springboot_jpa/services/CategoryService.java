@@ -1,9 +1,7 @@
 package com.pedro.workshop_springboot_jpa.services;
 
 import com.pedro.workshop_springboot_jpa.entities.Category;
-import com.pedro.workshop_springboot_jpa.entities.User;
 import com.pedro.workshop_springboot_jpa.repositories.CategoryRepository;
-import com.pedro.workshop_springboot_jpa.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

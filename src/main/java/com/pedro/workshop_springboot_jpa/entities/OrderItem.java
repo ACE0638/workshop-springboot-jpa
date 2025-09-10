@@ -1,13 +1,11 @@
 package com.pedro.workshop_springboot_jpa.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.pedro.workshop_springboot_jpa.entities.pk.OrderitemPK;
-import com.sun.jdi.PrimitiveValue;
+import com.pedro.workshop_springboot_jpa.entities.pk.OrderItemPK;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
-import java.io.PushbackInputStream;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -17,7 +15,7 @@ public class OrderItem implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @EmbeddedId
-    private OrderitemPK id = new OrderitemPK();
+    private OrderItemPK id = new OrderItemPK();
 
     private Integer quantity;
     private  Double price;
